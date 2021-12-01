@@ -1,5 +1,7 @@
 <template>
-  <body id="poster">
+  <body id="poster"
+        :style="{backgroundImage: `url(${require('@/assets/800005387.jpg')})`}"
+  >
   <el-form class="login-container" label-position="left"
            label-width="0px">
     <h3 class="login_title">系统登录</h3>
@@ -33,7 +35,7 @@ export default {
   methods: {
     login () {
       var _this = this
-      console.log(this.$store.state)
+      // console.log(this.$store.state)
       this.$axios
         .post('/login', {
           username: this.loginForm.username,
@@ -77,7 +79,7 @@ export default {
   }
 
   #poster {
-    background: url(./../assets/800005387.jpg) no-repeat center;
+    /*background: url('../assets/800005387.jpg') no-repeat center;*/
     height: 100%;
     width: 100%;
     background-size: cover;
